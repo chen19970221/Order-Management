@@ -799,8 +799,19 @@ $utilities: map-merge(
       property: z-index,
       class: z,
       values: $zindex-levels,
-    )
+    ),
     // scss-docs-end utils-zindex
+    "object-position":(
+      property: object-position,
+      class: img-position,
+      values: (
+        center: center,
+        top: top,
+        start: right,
+        bottom: bottom,
+        end: left,
+      )
+    )
   ),
   $utilities
 );
