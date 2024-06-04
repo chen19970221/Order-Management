@@ -9,12 +9,13 @@
 </head>
 <body>
   <div class="d-flex">
+    <!-- sidebar -->
     <aside class="sidebar vh-100 border-end d-flex flex-column bg-white">
       <!-- 標題 -->
       <p class="px-4 pt-3"><strong>兔寶寶餐館</strong> - 後台管理</p>
       <!-- 項目 -->
       <div class="overflow-auto">
-        <a href="#" class="sidebar-link">
+        <a href="./home.html" class="sidebar-link">
           <div class="px-4"><i class="bi bi-house me-2"></i>首頁</div>
         </a>
         <a href="#orders" class="sidebar-link" data-bs-toggle="collapse">
@@ -27,11 +28,11 @@
           </div>
         </a>
         <div class="collapse" id="orders">
-          <a href="#" class="sidebar-link">
+          <a href="./orders.html" class="sidebar-link">
             <div class="px-5">訂單列表</div>
           </a>
-          <a href="#" class="sidebar-link">
-            <div class="px-5">新增訂單</div>
+          <a href="./order.html" class="sidebar-link">
+            <div class="px-5">單一訂單細節</div>
           </a>
         </div>
         <a href="#" class="sidebar-link">
@@ -106,24 +107,24 @@
         <div class="card shadow-sm mb-4">
           <div class="card-header bg-transparent">
             <div class="input-group">
-              <span>
+              <span class="input-group-text bg-transparent border-0 pe-0">
                 <i class="bi bi-search"></i>
               </span>
-              <input type="text" class="form-control border-0" placeholder="搜尋訂單編號">
+              <input type="search" class="form-control border-0 shadow-none" placeholder="搜尋訂單編號">
             </div>
           </div>
           <div class="card-body p-0">
             <div class="table-responsive">
-              <table class="table table-hover">
+              <table class="table table-hover mb-0">
                 <thead class="text-nowrap table-primary">
-                  <tr>
-                    <th scope="col" class="ps-4">訂單編號</th>
+                  <tr class="align-middle">
+                    <th scope="col" class="py-3 ps-4">訂單編號</th>
                     <th scope="col">Email</th>
                     <th scope="col">用戶姓名</th>
                     <th scope="col">購買品項</th>
                     <th scope="col">付款狀態</th>
                     <th scope="col">購買金額</th>
-                    <th scope="col">編輯</th>
+                    <th scope="col" class="pe-4">編輯</th>
                   </tr>
                 </thead>
                 <tbody class="text-nowrap table-group-divider">
@@ -132,8 +133,8 @@
                     <td>ab1234@email.com</td>
                     <td>卡小伯</td>
                     <td>六角西餐：大麥克全家餐</td>
-                    <td class="text-muted">尚未付款</td>
-                    <td>900</td>
+                    <td class="text-danger">尚未付款</td>
+                    <td class="text-end">900</td>
                     <td>
                       <a href="#" class="btn btn-sm btn-outline-dark">編輯<i class="bi bi-pen ms-1"></i></a>
                     </td>
@@ -180,7 +181,7 @@
           </div>
           <div class="card-body p-0">
             <div class="table-responsive">
-              <table class="table table-hover">
+              <table class="table table-hover mb-0">
                 <thead class="text-nowrap table-primary">
                   <tr>
                     <th scope="col" class="ps-4"></th>
@@ -198,12 +199,12 @@
                     <td scope="row" class="ps-4">
                       <input type="checkbox" class="form-check-input">
                     </td>
-                    <td scope="row" id="orderId">TX123456789</td>
+                    <td scope="row" id="orderId">TX123456781</td>
                     <td>ab1234@email.com</td>
                     <td>卡小伯</td>
                     <td>六角西餐：大麥克全家餐</td>
-                    <td class="text-muted">尚未付款</td>
-                    <td>900</td>
+                    <td class="text-danger">尚未付款</td>
+                    <td class="text-end">900</td>
                     <td>
                       <div class="btn-group">
                         <a href="#" class="btn btn-sm btn-outline-dark">編輯<i class="bi bi-pen ms-1"></i></a>
@@ -213,7 +214,7 @@
                             <a href="#" class="text-decoration-none">修改狀態</a>
                           </li>
                           <li class="dropdown-item">
-                            <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-darget="#cancelOrderModal">刪除訂單</a>
+                            <a href="#" class="text-decoration-none link-danger" data-bs-toggle="modal" data-bs-target="#cancelOrderModal" data-bs-order-id="TX123456781">刪除訂單</a>
                           </li>
                         </ul>                  
                       </div>
@@ -223,12 +224,12 @@
                     <td scope="row" class="ps-4">
                       <input type="checkbox" class="form-check-input">
                     </td>
-                    <td scope="row" >TX123456789</td>
+                    <td scope="row" >TX123456782</td>
                     <td>ab1234@email.com</td>
                     <td>卡小伯</td>
                     <td>六角西餐：大麥克全家餐</td>
-                    <td class="text-muted">尚未付款</td>
-                    <td>900</td>
+                    <td class="text-danger">尚未付款</td>
+                    <td class="text-end">900</td>
                     <td>
                       <div class="btn-group">
                         <a href="#" class="btn btn-sm btn-outline-dark">編輯<i class="bi bi-pen ms-1"></i></a>
@@ -238,7 +239,7 @@
                             <a href="#" class="text-decoration-none">修改狀態</a>
                           </li>
                           <li class="dropdown-item">
-                            <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-darget="#cancelOrder">刪除訂單</a>
+                            <a href="#" class="text-decoration-none link-danger" data-bs-toggle="modal" data-bs-target="#cancelOrderModal" data-bs-order-id="TX123456782">刪除訂單</a>
                           </li>
                         </ul>                  
                       </div>
@@ -248,12 +249,12 @@
                     <td scope="row" class="ps-4">
                       <input type="checkbox" class="form-check-input">
                     </td>
-                    <td scope="row" >TX123456789</td>
+                    <td scope="row" >TX123456783</td>
                     <td>ab1234@email.com</td>
                     <td>卡小伯</td>
                     <td>六角西餐：大麥克全家餐</td>
-                    <td class="text-muted">尚未付款</td>
-                    <td>900</td>
+                    <td class="text-danger">尚未付款</td>
+                    <td class="text-end">900</td>
                     <td>
                       <div class="btn-group">
                         <a href="#" class="btn btn-sm btn-outline-dark">編輯<i class="bi bi-pen ms-1"></i></a>
@@ -263,7 +264,7 @@
                             <a href="#" class="text-decoration-none">修改狀態</a>
                           </li>
                           <li class="dropdown-item">
-                            <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-darget="#cancelOrder">刪除訂單</a>
+                            <a href="#" class="text-decoration-none link-danger" data-bs-toggle="modal" data-bs-target="#cancelOrderModal" data-bs-order-id="TX123456783">刪除訂單</a>
                           </li>
                         </ul>                  
                       </div>
@@ -273,12 +274,12 @@
                     <td scope="row" class="ps-4">
                       <input type="checkbox" class="form-check-input">
                     </td>
-                    <td scope="row" >TX123456789</td>
+                    <td scope="row" >TX123456784</td>
                     <td>ab1234@email.com</td>
                     <td>卡小伯</td>
                     <td>六角西餐：大麥克全家餐</td>
-                    <td class="text-muted">尚未付款</td>
-                    <td>900</td>
+                    <td class="text-danger">尚未付款</td>
+                    <td class="text-end">900</td>
                     <td>
                       <div class="btn-group">
                         <a href="#" class="btn btn-sm btn-outline-dark">編輯<i class="bi bi-pen ms-1"></i></a>
@@ -288,7 +289,7 @@
                             <a href="#" class="text-decoration-none">修改狀態</a>
                           </li>
                           <li class="dropdown-item">
-                            <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-darget="#cancelOrder">刪除訂單</a>
+                            <a href="#" class="text-decoration-none link-danger" data-bs-toggle="modal" data-bs-target="#cancelOrderModal" data-bs-order-id="TX123456784">刪除訂單</a>
                           </li>
                         </ul>                  
                       </div>
@@ -311,41 +312,42 @@
           </div>
         </div>
 
+
         <!-- Modal -->
         <div class="modal fade" id="cancelOrderModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h1>刪除訂單</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">刪除訂單</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <p>確定刪除「<span id="deleteText">TX123456788</span>」的訂單嗎？</p>
+                <p>確認刪除「 <span id="deleteText"></span> 」的訂單嗎？</p>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-danger">刪除</button>
+                <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger">確認刪除</button>
               </div>
             </div>
           </div>
         </div>
 
-
+        <!-- order -->
         <div class="row">
+          <!-- order list group -->
           <div class="col-lg-3">
-            <div class="list-group mb-4" id="navbarOption">
-              <a href="#summary" class="list-group-item">摘要</a>
-              <a href="#purchaseItems" class="list-group-item">購買品項</a>
-              <a href="#invoice" class="list-group-item">發票管理</a>
-              <a href="#dangerOption" class="list-group-item">危險操作</a>
+            <div class="list-group mb-4 sticky-top" style="top: 80px;"  id="navbarOption">
+              <a href="#summary" class="list-group-item list-group-item-action active">摘要</a>
+              <a href="#purchaseItems" class="list-group-item list-group-item-action">購買品項</a>
+              <a href="#invoice" class="list-group-item list-group-item-action">發票管理</a>
+              <a href="#dangerOption" class="list-group-item list-group-item-action">危險操作</a>
             </div>
           </div>
-
-          
-          <div class="col-lg-9" data-bs-spy="scroll" data-bs-target="#navbarOption"  data-bs-smooth-scroll="true"  tabindex="0">
+          <!-- order main -->
+          <div class="col-lg-9" data-bs-spy="scroll" data-bs-target="#navbarOption" data-bs-offset="80" data-bs-smooth-scroll="true" tabindex="0">
             <!-- summary -->
-            <div class="card mb-4">
-              <div class="card-header" id="summary">摘要</div>
+            <div class="card mb-4" id="summary">
+              <div class="card-header">摘要</div>
               <div class="card-body">
                 <div class="row">
                   <div class="col-3">
@@ -364,8 +366,8 @@
               </div>
             </div>
             <!-- Purchase items -->
-            <div class="card mb-4 overflow-auto">
-              <div class="card-header" id="purchaseItems">購買品項</div>
+            <div class="card mb-4 overflow-auto" id="purchaseItems">
+              <div class="card-header">購買品項</div>
               <div class="card-body">
                 <table class="table table-hover text-nowrap align-middle w-100" style="font-size: 14px;">
                   <thead class="bg-light">
@@ -436,13 +438,12 @@
                     <li><a href="" class="dropdown-item text-danger">刪除品項</a></li>
                   </ul>
                 </div>
-
               </div>
             </div>
 
             <!-- invoice -->
-            <div class="card mb-4">
-              <div class="card-header" id="invoice">發票管理</div>
+            <div class="card mb-4" id="invoice">
+              <div class="card-header">發票管理</div>
               <div class="card-body">
                 <div class="row mb-3">
                   <label for="invoiceType" class="col-3 col-form-label">發票類型</label>
@@ -468,7 +469,6 @@
                 </div>
               </div>
             </div>
-
             <!-- dangerOption -->
             <div class="card" id="dangerOption">
               <div class="card-header" >危險操作</div>
@@ -495,15 +495,9 @@
             </div>
           </div>   
         </div>
-
-        
-        
       </div>
     </main>
   </div>
-
-  
-
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script type="module" src="./index.js"></script>
 </body>
