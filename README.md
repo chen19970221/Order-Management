@@ -4,9 +4,9 @@
 
 ## Description
 
-頁面可至 [GitHub Pages](https://chen19970221.github.io/Order-Management/) 觀看
+頁面可至 [GitHub Pages](https://chen19970221.github.io/Order-Management/) 觀看，
 此專案有兩個版本，當前為僅使用 BootStrap 製作畫面的版本
-另有 vue 版本，請造訪 [Order-Management_ver2]([url](https://github.com/chen19970221/Order-Management_ver2))
+另有 vue 版本，請造訪 [Order-Management_ver2](https://chen19970221.github.io/Order-Management_ver2/)
 
 
 ## Features
